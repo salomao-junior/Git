@@ -1,11 +1,163 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
     <title>Git Trail - Monks</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <header>
+      <nav id="nav-menu">
+        <h1>Training</h1>
+        <ul>
+          <li><a href="#basic" class="b">Basic</a></li>
+          <li><a href="#medium" class="m">Medium</a></li>
+          <li><a href="#advanced" class="a">Advanced</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="basic">
+        <h1>Basic Content</h1>
+
+        <div class="questions">
+          <div class="question">
+            <h2>1. What is version control and how does Git work?</h2>
+            <p>
+              Version control is a system that helps track changes to files over
+              time. It allows multiple developers (or even a single developer)
+              to collaborate, manage different versions of their code, and track
+              history in a way that enables easy rollback or recovery of earlier
+              versions. It also helps in merging changes made by different
+              contributors to the same project.
+            </p>
+
+            <p>
+              Git is a distributed version control system. It allows each user
+              to have a complete local copy of the repository, with the entire
+              history of changes. This means Git works even when you're offline,
+              and you can sync your local changes with a remote repository when
+              you are ready.
+            </p>
+          </div>
+
+          <div class="question">
+            <h2>
+              2. What are the 3 possible states of files? (Modified, Staged and
+              Committed)
+            </h2>
+            <p>
+              <b>Modified:</b> The file has been changed in the working
+              directory (your local machine), but the changes have not yet been
+              staged (added to the index) or committed to the repository.
+            </p>
+            <p>
+              <b>Staged:</b> The file is in the staging area (index), meaning it
+              is prepared and ready to be committed to the local repository. It
+              has been added using the git add command.
+            </p>
+            <p>
+              <b>Commited:</b> The changes are saved to the local repository,
+              which means they have been stored and the history has been
+              updated. A committed file is part of the version history.
+            </p>
+          </div>
+
+          <div class="question">
+            <h2>3. How to start a git repository in a project?</h2>
+            <p>To start a Git repository in a project, follow these steps:</p>
+            <ol>
+              <li>
+                Navigate to your project folder using the command line or
+                terminal.
+              </li>
+              <li>Initialize a Git repository by running: git init</li>
+            </ol>
+            <p>
+              This command creates a hidden .git directory, marking the folder
+              as a Git repository.
+            </p>
+          </div>
+
+          <div class="question">
+            <h2>4. How to store changes to files in Git?</h2>
+            <p>To store changes to files in Git, you follow a few steps:</p>
+            <ol>
+              <li>
+                Stage the files using git add: git add 'filename' or git add .
+              </li>
+              <li>
+                Commit the changes using git commit: git commit -m 'feat(init):
+                Create initial file'
+              </li>
+            </ol>
+            <p>
+              The git add command stages the changes, and git commit stores them
+              in the repository's history.
+            </p>
+          </div>
+
+          <div class="question">
+            <h2>5. How to view the change history?</h2>
+            <p>
+              To view the change history in Git, you can use the git log
+              command: git log
+            </p>
+            <p>
+              This will show a list of commits, including the commit ID, author,
+              date, and commit message. You can add additional flags to
+              customize the output, for example: git log --oneline
+            </p>
+          </div>
+
+          <div class="question">
+            <h2>
+              6. How to add files to an already Committed file, remove a file
+              from the Staged state and discard changes to a Modified file?
+              (amend, reset, checkout)
+            </h2>
+            <p>
+              <b>(Amend)</b> If you want to modify the most recent commit (for
+              example, adding a new file or changing the commit message):
+            </p>
+            <ol>
+              <li>Stage the new file: git add 'filename'</li>
+              <li>Amend the last commit: git commit --amend</li>
+            </ol>
+            <p>
+              This will open your default text editor where you can modify the
+              commit message, or you can add the --no-edit flag to keep the
+              existing message.
+            </p>
+
+            <hr />
+
+            <p>
+              <b>(Reset)</b> If you've staged a file but decide not to commit
+              it, you can remove it from the staging area: git reset 'filename'
+            </p>
+            <p>
+              This moves the file from the staged area back to the modified
+              state, without losing any changes made to the file.
+            </p>
+
+            <hr />
+
+            <p>
+              <b>(Checkout)</b> If you want to discard local changes and restore
+              the file to its last committed state, use: git checkout --
+              'filename'
+            </p>
+            <p>
+              This command replaces the file with its version from the last
+              commit, effectively discarding your local changes.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
