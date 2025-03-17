@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --black: #222222;
+  --white: #fcfcfc;
+  --green: #a0eaa0;
+  --yellow: #f3ff4b;
+  --red: #ff4242;
+}
+
+#nav-menu {
+  display: flex;
+  position: relative;
+  background-color: var(--black);
+  color: var(--white);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  gap: 2rem;
+  height: 90px;
+
+  & h1 {
+    position: absolute;
+  }
+
+  & ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+
+    & li {
+      & a {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+#basic {
+  & h1 {
+    background-color: var(--green);
+    width: fit-content;
+    padding: 0 2rem;
+    margin: 2rem 0;
+    font-size: 2rem;
+  }
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  margin-bottom: 5rem;
+  & h2 {
+    font-size: 1.2rem;
+  }
+
+  & .question {
+    & p {
+      text-align: justify;
+      margin: 0.5rem 0;
+    }
+
+    & ol,
+    ul {
+      margin-left: 2.5rem;
+    }
+  }
+}
+
+.b,
+.m,
+.a {
+  color: var(--white);
+}
+
+.b:hover {
+  color: var(--green);
+}
+.m:hover {
+  color: var(--yellow);
+}
+.a:hover {
+  color: var(--red);
+}
