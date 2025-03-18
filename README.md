@@ -1,4 +1,4 @@
-# Git-Trail
+# Git
 Repository intended for training basic, intermediate and advanced level git commands.
 
 ## Basic Content
